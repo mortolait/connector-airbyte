@@ -69,7 +69,7 @@ class BigQueryDestination : BaseConnector(), Destination {
             val bigquery = getBigQuery(config)
             val uploadingMethod = getLoadingMethod(config)
 
-            checkHasCreateAndDeleteDatasetRole(bigquery, datasetId, datasetLocation)
+            // checkHasCreateAndDeleteDatasetRole(bigquery, datasetId, datasetLocation)
 
             val dataset = getOrCreateDataset(bigquery, datasetId, datasetLocation)
             if (dataset.location != datasetLocation) {
